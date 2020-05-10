@@ -1,0 +1,10 @@
+---
+- name: docker-compose down if something exists
+  docker_compose:
+    project_src: "{{ docker_compose_path }}"
+    state: absent
+
+- name: docker-compose up
+  docker_compose:
+    project_src: "{{ docker_compose_path }}"
+    state: absent

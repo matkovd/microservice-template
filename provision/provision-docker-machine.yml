@@ -1,1 +1,9 @@
 ---
+- hosts: all
+
+  roles:
+    - install-docker
+    - docker-login
+    - create-docker-compose
+    - docker-compose-up
+

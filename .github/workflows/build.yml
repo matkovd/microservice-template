@@ -29,7 +29,12 @@ jobs:
       run: ./gradlew docker
       working-directory: microservice
       
-    - name: Push image
-      uses: matootie/github-docker@v2.2.2
-      with:
-        accessToken: ${{ secrets.GITHUB_TOKEN }}
+    - name: Docker login
+      run: docker login docker.pkg.github.com --username matkov --password ${{ secrets.GITHUB_TOKEN }}
+      working-directory: microservice
+  
+    - name: Push docker images
+      run: ./gradlew dockerTagsPush
+      working-directory: microservice
+      
+ 

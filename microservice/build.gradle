@@ -61,7 +61,7 @@ tasks.withType(JavaExec) {
 }
 
 docker {
-    name "docker.pkg.github.com/${project.name}"
+    name "docker.pkg.github.com/matkovd/microservice-template/${project.name}"
     tags 'latest', System.getenv("GITHUB_RUN_NUMBER")
     files tasks.shadowJar.outputs
     copySpec.into("build/libs")

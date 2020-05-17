@@ -1,3 +1,11 @@
 micronaut:
   application:
     name: microservice
+
+endpoints:
+  health:
+    enabled: true
+  info:
+    enabled: ${INFO_ENDPOINT_ENABLED:false}
+  threaddump:
+    enabled: ${THREAD_DUMP_ENDPOINT_ENABLED:false}

@@ -1,1 +1,2 @@
-docker_image_name: "{{ docker_registry }}/{{ microservice_name }}"
+docker_image_name: "{{ docker_registry }}/matkovd/{{ microservice_name }}/{{ microservice_name }}"
+tag: production

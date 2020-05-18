@@ -1,3 +1,4 @@
 docker_registry: docker.pkg.github.com
-microservice_name: microservice
+microservice_name: microservice-template
 docker_compose_path: "{{ '~' | expanduser }}"
+tag: latest

@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   microservice:
-    image: {{ docker_image_name }}
+    image: {{ docker_image_name }}:{{ tag }}
     restart: always
     environment:
       - SOME_ENV_VAR={{ some_env_var }}
